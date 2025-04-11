@@ -3,11 +3,12 @@
 // .jsx = JavaScript + XML
 
 import { Header } from './components/Header'
-import Post from './Post';
+import { Post } from './components/Post';
+import { Sidebar } from './components/Sidebar';
 
 import './global.css';
 import styles from './components/App.module.css'
-import { Sidebar } from './components/Sidebar';
+
 
 export function App() { // componente App -> função que retorna HMTL
 
