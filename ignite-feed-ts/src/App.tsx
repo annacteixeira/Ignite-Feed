@@ -2,7 +2,7 @@
 // Todos os componentes possuem extensão .jsx
 // .jsx = JavaScript + XML
 import { Header } from './components/Header'
-import { Post } from './components/Post';
+import { Post, PostType} from './components/Post';
 import { Sidebar } from './components/Sidebar'
 
 import './global.css';
@@ -12,7 +12,7 @@ import styles from './components/App.module.css'
 // publishedAt: Date
 // content: String
 
-const posts = [
+const posts: PostType[] = [
   {
     id: 1,
     author: {
@@ -68,9 +68,7 @@ export function App() { // componente App -> função que retorna HMTL
               return (
                 <Post
                   key={post.id}
-                  author={post.author}
-                  content={post.content}
-                  publishedAt={post.publishedAt}
+                  post={post}
                 />
               )
             })}
